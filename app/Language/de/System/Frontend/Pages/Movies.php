@@ -55,6 +55,7 @@ return [
         'label' => [
             'background_image' => 'Hintergrund Bild',
             'clicks' => 'Klicks',
+            'color_palette' => 'Farbpalette',
             'name' => 'Titel',
             'old' => 'Alt',
             'rating' => 'Bewertung',
@@ -64,6 +65,14 @@ return [
             'subject_position' => 'Keyword Position'
         ],
         'options' => [
+            'color_palette' => [
+                'black_and_white' => 'Schwarz Weiß',
+                'normal' => 'Normal',
+                'notset' => '',
+                'saturated' => 'Gesättigt',
+                'sepia' => 'Sepia',
+                'vintage' => 'Vintage'
+            ],
             'old' => [
                 'no' => 'Nein',
                 'yes' => 'Ja'
