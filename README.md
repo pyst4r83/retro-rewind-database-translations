@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/assets/img/og-logo.webp" alt="Retro Rewind Database" height="279" width="500">
+  <img src="src/images/og-logo.webp" alt="Retro Rewind Database" height="279" width="500">
 </p>
 
 # 🌍 Translation – Multilingual Project
