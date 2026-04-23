@@ -38,6 +38,7 @@ return [
             'language' => 'Sprache',
             'lastname' => 'Nachname',
             'location' => 'Standort',
+            'membership_badge_style' => 'Mitgliedschafts Badge Stil',
             'sex' => 'Geschlecht',
             'social_discord' => 'Discord',
             'social_instagram' => 'Instagram',
@@ -48,6 +49,10 @@ return [
             'website' => 'Webseite'
         ],
         'options' => [
+            'membership_badge_style' => [
+                'exclusive' => 'Exklusiv',
+                'normal' => 'Normal'
+            ],
             'sex' => [
                 'diverse' => 'Divers',
                 'female' => 'Weiblich',
@@ -63,6 +68,7 @@ return [
             'language' => 'Sprache hier auswählen',
             'lastname' => 'Nachname hier eingeben',
             'location' => 'Standort hier eingeben',
+            'membership_badge_style' => 'Mitgliedschafts Badge Stil hier auswählen',
             'sex' => 'Geschlecht hier auswählen',
             'social_discord' => 'username#0000',
             'social_instagram' => '@username',

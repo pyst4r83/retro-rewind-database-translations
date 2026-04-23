@@ -47,6 +47,10 @@ return [
         'max_length' => 'Der Standort darf maximal 255 Zeichen lang sein',
         'min_length' => 'Der Standort muss mindestens 3 Zeichen lang sein'
     ],
+    'membership_badge_style' => [
+        'in_list' => 'Deine Auswahl ist nicht in der Auswahlliste enthalten',
+        'required' => 'Du musst einen Mitgliedschafts Badge Stil auswählen'
+    ],
     'sex' => [
         'in_list' => 'Deine Auswahl ist nicht in der Auswahlliste enthalten'
     ],
