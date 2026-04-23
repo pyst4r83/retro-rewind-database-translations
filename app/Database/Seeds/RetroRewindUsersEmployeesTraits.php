@@ -1,0 +1,238 @@
+<?php
+
+namespace App\Database\Seeds;
+
+use CodeIgniter\Database\Seeder;
+use App\Models\RetroRewindUsersEmployeesTraitsModel;
+use App\Models\TranslationsModel;
+
+class RetroRewindUsersEmployeesTraits extends Seeder
+{
+    private RetroRewindUsersEmployeesTraitsModel $retroRewindUsersEmployeesTraitsModel;
+    private TranslationsModel $translationsModel;
+
+    public function __construct()
+    {
+        $this->retroRewindUsersEmployeesTraitsModel = model(RetroRewindUsersEmployeesTraitsModel::class);
+        $this->translationsModel = model(TranslationsModel::class);
+    }
+
+    public function run()
+    {
+        $data = ['slug' => 'restless'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Nie hungrig'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Wird nie eine Mittagspause machen.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Never Hungry'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Will never take a lunch break.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Nunca Hambriento'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Nunca se tomará un descanso para almorzar.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Jamais affamé'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne prends jamais une pause déjeuner.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Mai affamato'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non farà mai la pausa pranzo.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Nunca com Fome'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Nunca faz pausa para o almoço.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'strong-immune-system'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Starkes Immunsystem'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Wird sich nie krankmelden.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Strong Immune System'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Will never take a sick day.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Sistema inmunitario fuerte'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Nunca se cogerá un día por enfermedad.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Système immunitaire solide'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne prendra jamais une journée de maladie.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Sistema immunitario forte'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non prenderà mai un giorno di malattia.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Sistema Imunológico Forte'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Nunca tira licença médica.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'runner'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Läufer'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Schnellere Laufgeschwindigkeit.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Runner'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Faster walk speed.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Corredor'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Camina más rápido.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Coureur'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Vitesse de marche plus rapide.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Corridore'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Camminata più veloce.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Corredor'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Velocidade de caminhada mais rápida.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'tough'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Dickes Fell'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Kündigt nicht, wenn angeschrien wird, schneller zu arbeiten.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Thick-Skinned'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Does not quit when yelled at to work faster.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Insensible'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'No dimite cuando se le grita para que trabaje más rápido.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Dur à cuire'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne démissionnera pas lorsqu\'on lui crie de travailler plus vite.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Impassibile'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non smette di lavorare se gli si urla di lavorare più velocemente.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Pele Grossa'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Não desiste quando gritam para trabalhar mais rápido.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'strong-bladder'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Starke Blase'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Macht keine Toilettenpausen.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Strong Bladder'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Does not take bathroom breaks.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Vejiga fuerte'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'No toma pausas para ir baño.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Vessie solide'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne prends pas de pauses pour aller à la toilette.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Vescica robusta'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non fa pause bagno.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Bexiga Forte'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Não faz pausas para ir ao banheiro.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'night-owl'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Energetisch'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Schläft nie bei der Arbeit ein.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Energetic'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Never falls asleep at work.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Enérgico'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Nunca se duerme en el trabajo.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Énergétique'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne tombe jamais endormi au travail.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Energetico'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non si addormenterà mai al lavoro.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Cheio de Energia'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Nunca dorme no trabalho.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'peasent'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Loyal'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Fragt nie nach einer Gehaltserhöhung.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Loyal'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Will never ask for a raise.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Leal'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Nunca pedirá un aumento.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Fidèle'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Ne demandera jamais une augmentation.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Fedele'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Non chiederà mai un aumento.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Leal'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Nunca pedirá aumento.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+
+        $data = ['slug' => 'assistant-manager'];
+        $trait_id = $this->retroRewindUsersEmployeesTraitsModel->protect(false)->skipValidation(true)->insert($data, true);
+        $translation_data_de = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'de', 'translation' => 'Kundenservice'];
+        $translation_data_de_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'de', 'translation' => 'Kümmert sich um alle Kundenbeschwerden an der Kasse.'];
+        $translation_data_en = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'en', 'translation' => 'Complaint Handler'];
+        $translation_data_en_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'en', 'translation' => 'Will handle all customer complaints at the checkout.'];
+        $translation_data_es = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'es', 'translation' => 'Atender Quejas'];
+        $translation_data_es_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'es', 'translation' => 'Se atenderán todas las quejas de los clientes antes del cobro.'];
+        $translation_data_fr = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'fr', 'translation' => 'Gestionnaire de plaintes'];
+        $translation_data_fr_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'fr', 'translation' => 'Traitera toutes les plaintes des clients à la caisse.'];
+        $translation_data_it = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'it', 'translation' => 'Responsabile Reclami'];
+        $translation_data_it_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'it', 'translation' => 'Gestirà tutti i reclami dei clienti alla cassa.'];
+        $translation_data_pt = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'name', 'language' => 'pt', 'translation' => 'Atendente de Reclamações'];
+        $translation_data_pt_desc = ['parent_id' => $trait_id, 'table_name' => 'retro_rewind_users_employees_traits', 'type' => 'description', 'language' => 'pt', 'translation' => 'Lidará com todas as reclamações dos clientes no caixa.'];
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_de_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_en_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_es_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_fr_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it_desc);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
+        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt_desc);
+    }
+}
