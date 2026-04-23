@@ -18,7 +18,7 @@ The website should be available in multiple languages. This repository manages:
 
 | Language                                   | Code | Status           |
 | ------------------------------------------ | ---- | ---------------- |
-| [German](app/Language/de/)                 | `de` | Work in progress |
+| [German](app/Language/de/)                 | `de` | Done             |
 | [English](app/Language/en/)                | `en` | Work in progress |
 | [Spanish](app/Language/es/)                | `es` | Work in progress |
 | [French](app/Language/fr/)                 | `fr` | Work in progress |
