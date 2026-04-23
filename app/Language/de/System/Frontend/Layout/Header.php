@@ -37,5 +37,10 @@ return [
             'logout' => 'Abmelden',
             'shop' => 'Mein Shop'
         ]
+    ],
+    'status' => [
+        'bronze' => 'Bronze Mitglied',
+        'gold' => 'Gold Mitglied',
+        'silver' => 'Silber Mitglied'
     ]
 ];
