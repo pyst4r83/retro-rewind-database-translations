@@ -42,10 +42,12 @@ return [
     ],
     'background_image' => 'Hintergrund',
     'clicks' => 'Klicks',
+    'contact' => 'Kontaktformular',
     'critics' => [
         'bad' => 'Schlechte Kritik',
         'good' => 'Gute Kritik'
     ],
+    'detail_hint' => 'Du hast einen Fehler in unseren Daten gefunden?<br>Kein Thema, Nobody is perfect. Kontaktiere uns doch bitte über das %contact% mit Angabe der SKU und des Filmtitels und wir schauen uns das gerne nochmal an',
     'entries_per_page' => 'Einträge',
     'form' => [
         'btn' => [
