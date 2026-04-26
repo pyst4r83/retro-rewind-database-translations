@@ -16,14 +16,14 @@ The website should be available in multiple languages. This repository manages:
 
 ## 🗣️ Supported Languages
 
-| Language                                   | Code | Status           |
-| ------------------------------------------ | ---- | ---------------- |
-| [German](app/Language/de/)                 | `de` | Done             |
-| [English](app/Language/en/)                | `en` | Work in progress |
-| [Spanish](app/Language/es/)                | `es` | Work in progress |
-| [French](app/Language/fr/)                 | `fr` | Work in progress |
-| [Italian](app/Language/it/)                | `it` | Work in progress |
-| [Portuguese (Brazilian)](app/Language/pt/) | `pt` | Work in progress |
+| Language                                   | Code | Status |
+| ------------------------------------------ | ---- | ------ |
+| [German](app/Language/de/)                 | `de` | Done   |
+| [English](app/Language/en/)                | `en` | Done   |
+| [Spanish](app/Language/es/)                | `es` | Done   |
+| [French](app/Language/fr/)                 | `fr` | Done   |
+| [Italian](app/Language/it/)                | `it` | Done   |
+| [Portuguese (Brazilian)](app/Language/pt/) | `pt` | Done   |
 
 - More languages will be added if the game is converted to more languages
 
