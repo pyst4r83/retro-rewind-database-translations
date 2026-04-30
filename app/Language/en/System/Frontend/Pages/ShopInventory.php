@@ -15,6 +15,11 @@
  */
 
 return [
+    'alerts' => [
+        'info' => [
+            'no_movies' => 'No movies found in inventory'
+        ]
+    ],
     'form' => [
         'btn' => [
             'add' => 'Add movie'

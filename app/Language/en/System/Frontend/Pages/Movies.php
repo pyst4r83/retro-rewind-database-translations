@@ -58,6 +58,8 @@ return [
             'background_image' => 'Background image',
             'clicks' => 'Clicks',
             'color_palette' => 'Color palette',
+            'cover' => 'Cover',
+            'genre' => 'Genre',
             'name' => 'Title',
             'old' => 'Old',
             'rating' => 'Rating',
@@ -70,7 +72,6 @@ return [
             'color_palette' => [
                 'black_and_white' => 'Black and white',
                 'normal' => 'Normal',
-                'notset' => '',
                 'saturated' => 'Saturated',
                 'sepia' => 'Sepia',
                 'vintage' => 'Vintage'
