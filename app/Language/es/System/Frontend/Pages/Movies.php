@@ -58,6 +58,8 @@ return [
             'background_image' => 'Imagen de fondo',
             'clicks' => 'Clics',
             'color_palette' => 'Paleta de colores',
+            'cover' => 'Portada',
+            'genre' => 'Género',
             'name' => 'Título',
             'old' => 'Antigua',
             'rating' => 'Calificación',
@@ -70,7 +72,6 @@ return [
             'color_palette' => [
                 'black_and_white' => 'Blanco y negro',
                 'normal' => 'Normal',
-                'notset' => '',
                 'saturated' => 'Saturado',
                 'sepia' => 'Sepia',
                 'vintage' => 'Vintage'
