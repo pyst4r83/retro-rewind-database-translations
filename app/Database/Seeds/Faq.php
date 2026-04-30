@@ -19,7 +19,7 @@ class Faq extends Seeder
 
     public function run()
     {
-        $data = ['category' => 'general', 'slug' => url_title('What is Retro Rewind?', '-', true), 'sort' => 1];
+        $data = ['category' => 'general', 'slug' => url_title('What is Retro Rewind?', '-', true), 'active' => true, 'sort' => 1];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Was ist Retro Rewind?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Retro Rewind ist ein Video Store Simulator im Stil der 80er und 90er Jahre. Du kannst deinen eigenen virtuellen Videoverleih betreiben, Filme verwalten, Kunden bedienen und in Nostalgie schwelgen.'];
@@ -46,20 +46,20 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'general', 'slug' => url_title('Is the database free to use?', '-', true), 'sort' => 2];
+        $data = ['category' => 'general', 'slug' => url_title('Is the database free to use?', '-', true), 'active' => true, 'sort' => 2];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Ist die Nutzung der Datenbank kostenlos?'];
-        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ja, die Datenbank ist komplett kostenlos. Wir bieten zwar Mitgliedschaften an aber die sind nur für zusätzliche Vorteile und nicht für die Nutzung der Datenbank erforderlich. Du wirst immer kostenlosen Zugriff auf alle Funktionen und Inhalte der Retro Rewind Datenbank haben die nichts mit den eigenen Shops zu tun haben. Die Vorteile der Mitgliedschaften beziehen sich nur auf den eigenen Shop.'];
-        $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'Is the database free to use?'];
-        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'Yes, the database is completely free. We do offer memberships, but they are only for additional benefits and are not required to use the database. You will always have free access to all features and content of the Retro Rewind Database that are not related to your own shop. The benefits of memberships only apply to your own shop.'];
-        $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿Es gratis usar la base de datos?'];
-        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'Sí, la base de datos es completamente gratuita. Ofrecemos membresías, pero son solo para beneficios adicionales y no son necesarias para usar la base de datos. Siempre tendrás acceso gratuito a todas las funciones y contenido de la Base de datos Retro Rewind que no estén relacionados con tu propia tienda. Los beneficios de las membresías solo se aplican a tu propia tienda.'];
+        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ja, die Datenbank ist komplett kostenlos.'];
+        $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'Is the use of the database free of charge?'];
+        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'Yes, the database is completely free.'];
+        $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿Es gratuito el uso de la base de datos?'];
+        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'Sí, la base de datos es completamente gratuita.'];
         $translation_question_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'fr', 'translation' => 'L\'utilisation de la base de données est-elle gratuite ?'];
-        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Oui, la base de données est entièrement gratuite. Nous proposons des abonnements, mais ils ne sont que pour des avantages supplémentaires et ne sont pas nécessaires pour utiliser la base de données. Vous aurez toujours un accès gratuit à toutes les fonctionnalités et contenus de la Base de données Retro Rewind qui n\'ont aucun lien avec votre propre boutique. Les avantages des abonnements ne s\'appliquent qu\'à votre propre boutique.'];
-        $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'L\'uso del database è gratuito?'];
-        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Sì, il database è completamente gratuito. Offriamo abbonamenti, ma sono solo per vantaggi aggiuntivi e non sono necessari per utilizzare il database. Avrai sempre accesso gratuito a tutte le funzionalità e ai contenuti del database cinematografico Retro Rewind che non hanno nulla a che fare con il tuo negozio personale. I vantaggi degli abbonamenti si applicano solo al tuo negozio personale.'];
+        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Oui, la base de données est entièrement gratuite.'];
+        $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'L\'utilizzo del database è gratuito?'];
+        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Sì, il database è completamente gratuito.'];
         $translation_question_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'pt', 'translation' => 'O uso do banco de dados é gratuito?'];
-        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Sim, o banco de dados é completamente gratuito. Oferecemos assinaturas, mas elas são apenas para benefícios adicionais e não são necessárias para usar o banco de dados. Você sempre terá acesso gratuito a todos os recursos e conteúdos do Banco de dados Retro Rewind que não têm nada a ver com sua própria loja. Os benefícios das assinaturas se aplicam apenas à sua própria loja.'];
+        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Sim, o banco de dados é completamente gratuito.'];
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_en);
@@ -73,7 +73,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'general', 'slug' => url_title('Which browsers are supported?', '-', true), 'sort' => 3];
+        $data = ['category' => 'general', 'slug' => url_title('Which browsers are supported?', '-', true), 'active' => true, 'sort' => 3];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Welche Browser werden unterstützt?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Die Retro Rewind Datenbank funktioniert in allen modernen Browsern - Chrome, Firefox, Safari und Edge. Für das beste Retro-Erlebnis empfehlen wir einen Vollbild-Modus und aktivierte Animationen.'];
@@ -100,7 +100,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'account-profile', 'slug' => url_title('How do I create an account?', '-', true), 'sort' => 4];
+        $data = ['category' => 'account-profile', 'slug' => url_title('How do I create an account?', '-', true), 'active' => true, 'sort' => 4];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie erstelle ich ein Konto?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Klicke oben rechts auf „Anmelden", wähle dann „Registrieren" und fülle das Formular aus. Du erhältst eine Bestätigungs-E-Mail, um dein Konto zu aktivieren. Danach kannst du sofort loslegen!'];
@@ -127,7 +127,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my username?', '-', true), 'sort' => 5];
+        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my username?', '-', true), 'active' => true, 'sort' => 5];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich meinen Benutzernamen ändern?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ja! Gehe zu deinem %edit_profile% und wähle „Benutzername". Beachte, dass der Benutzername einzigartig sein muss und bestimmten Richtlinien entsprechen sollte.'];
@@ -154,7 +154,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my display name?', '-', true), 'sort' => 6];
+        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my display name?', '-', true), 'active' => true, 'sort' => 6];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich meinen Anzeigenamen ändern?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ja! Gehe zu deinem %edit_profile% und wähle „Profil". Beachte, dass der Anzeigename einzigartig sein muss und bestimmten Richtlinien entsprechen sollte.'];
@@ -181,7 +181,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my email address?', '-', true), 'sort' => 7];
+        $data = ['category' => 'account-profile', 'slug' => url_title('Can I change my email address?', '-', true), 'active' => true, 'sort' => 7];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich meine E-Mail Adresse ändern?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ja! Gehe zu deinem %edit_profile% und wähle „E-Mail Adresse".'];
@@ -208,7 +208,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'account-profile', 'slug' => url_title('How do I reset my password?', '-', true), 'sort' => 8];
+        $data = ['category' => 'account-profile', 'slug' => url_title('How do I reset my password?', '-', true), 'active' => true, 'sort' => 8];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie setze ich mein Passwort zurück?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Auf der Login-Seite findest du den Link „Passwort vergessen?". Gib deine registrierte E-Mail Adresse ein und du erhältst einen Link zum Zurücksetzen deines Passworts.'];
@@ -235,7 +235,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'membership-subscription', 'slug' => url_title('What membership options are available?', '-', true), 'sort' => 9];
+        $data = ['category' => 'membership-subscription', 'slug' => url_title('What membership options are available?', '-', true), 'active' => false, 'sort' => 9];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Welche Mitgliedschaftsoptionen gibt es?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Es gibt insgesamt drei Mitgliedschaftsoptionen: Bronze, Silber und Gold. Jede Mitgliedschaft bietet unterschiedliche Vorteile, wie z.B. Zugang zu exklusiven Genre Badges im Shop Profil und einem exklusiven Retro Rewind Neon Shop Schild.'];
@@ -262,7 +262,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'membership-subscription', 'slug' => url_title('How much do the membership options cost?', '-', true), 'sort' => 10];
+        $data = ['category' => 'membership-subscription', 'slug' => url_title('How much do the membership options cost?', '-', true), 'active' => false, 'sort' => 10];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Was kosten die Mitgliedschaftsoptionen?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Die Bronze Mitgliedschaft ist kostenlos, die bekommst du sobald du dich registrierst. Die Silber Mitgliedschaft kostet 2,99 € pro Monat und die Gold Mitgliedschaft kostet 4,99 € pro Monat. Dabei kannst du wählen ob du monatlich oder jährlich zahlen möchtest. Bei jährlicher Zahlung erhälst du die Silber Mitgliedschaft für 29,99 € pro Jahr und die Gold Mitgliedschaft für 49,99 € pro Jahr. Somit sparst du bei jährlicher Zahlung im Vergleich zur monatlichen Zahlung 5,89 € bei der Silber Mitgliedschaft und 9,89 € bei der Gold Mitgliedschaft.'];
@@ -289,7 +289,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'membership-subscription', 'slug' => url_title('How do you process my payment information?', '-', true), 'sort' => 11];
+        $data = ['category' => 'membership-subscription', 'slug' => url_title('How do you process my payment information?', '-', true), 'active' => false, 'sort' => 11];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie verarbeitet ihr meine Zahlungsdaten?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Wir leiten dich zur Zahlung an unseren Zahlungsdienstleister Stripe weiter. Dort kannst du deine Zahlungsdaten sicher eingeben. Wir speichern keine Zahlungsdaten auf unseren Servern, sondern erhalten nur die Information, dass die Zahlung erfolgreich war, damit wir dir die entsprechenden Vorteile deiner Mitgliedschaft freischalten können.'];
@@ -316,7 +316,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'membership-subscription', 'slug' => url_title('Which payment methods can I use to purchase a membership?', '-', true), 'sort' => 12];
+        $data = ['category' => 'membership-subscription', 'slug' => url_title('Which payment methods can I use to purchase a membership?', '-', true), 'active' => false, 'sort' => 12];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Welche Zahlungsarten kann ich benutzen um eine Mitgliedschaft zu erwerben?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Wir haben verschiedene Zahlungsarten im Angebot, damit du diejenige auswählen kannst, die am besten zu dir passt. Du kannst mit Kreditkarte, Klarna, Apple Pay, Google Pay, PayPal, Link, Bancontact (Belgien), BLIK (Polen), EPS (Österreich), iDEAL | Wero (Niederlande), Przelewy24 (Polen) und Pix bezahlen. Alle Zahlungen werden sicher über unseren Zahlungsdienstleister Stripe abgewickelt. Welche Zahlungsarten dir genau angezeigt werden, hängt von deinem Standort ab.'];
@@ -343,7 +343,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'membership-subscription', 'slug' => url_title('How do you handle upgrading and downgrading the membership?', '-', true), 'sort' => 13];
+        $data = ['category' => 'membership-subscription', 'slug' => url_title('How do you handle upgrading and downgrading the membership?', '-', true), 'active' => false, 'sort' => 13];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie handhabt ihr das Up- und Downgraden der Mitgliedschaft?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Ein Upgrade (beispielsweise von Bronze auf Silber oder Gold) wird sofort wirksam. Du erhältst direkt Zugriff auf die Vorteile der höheren Mitgliedschaftsstufe und wirst entsprechend in der Shop Übersicht und deinem Profil angezeigt. Ein Downgrade (beispielsweise von Gold auf Silber oder Bronze) wird zum Ende des bereits bezahlten Zeitraums wirksam. Das bedeutet, dass du bis zum Ende des aktuellen Abrechnungszeitraums die Vorteile der höheren Mitgliedschaftsstufe behältst und erst danach auf die niedrigere Stufe herabgestuft wirst.'];
@@ -370,7 +370,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I open my own store?', '-', true), 'sort' => 14];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I open my own store?', '-', true), 'active' => true, 'sort' => 14];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie eröffne ich meinen eigenen Shop?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Nach der Registrierung kannst du über dein %edit_profile% einen neuen Shop anlegen. Wähle einen Shop Namen, lade ein Shop Hintergrundbild hoch und schon kann es losgehen. Dein Shop erscheint dann im %shop_overview%.'];
@@ -397,7 +397,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my inventory?', '-', true), 'sort' => 15];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my inventory?', '-', true), 'active' => true, 'sort' => 15];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie füge ich Filme zu meinem Inventar hinzu?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'In deiner %shop_overview% findest du den Bereich „Inventar". Dort kannst du aus der gesamten Filmdatenbank Titel auswählen und zu deinem Bestand hinzufügen. Außerdem hast du in der Datenbank die Möglichkeit über den zum Inventar hinzufügen Button einen Film zu deinem Inventar hinzuzufügen.'];
@@ -424,7 +424,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my favorites?', '-', true), 'sort' => 16];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my favorites?', '-', true), 'active' => true, 'sort' => 16];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie füge ich Filme zu meinen Favoriten hinzu?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'In deiner %shop_overview% findest du den Bereich „Favoriten". Dort kannst du aus der gesamten Filmdatenbank Titel auswählen und zu deinem Bestand hinzufügen. Außerdem hast du in der Datenbank die Möglichkeit über den zu Favoriten hinzufügen Button einen Film zu deinen Favoriten hinzuzufügen.'];
@@ -451,7 +451,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my showcase?', '-', true), 'sort' => 17];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('How do I add movies to my showcase?', '-', true), 'active' => true, 'sort' => 17];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie füge ich Filme zu meiner Vitrine hinzu?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'In deiner %shop_overview% findest du den Bereich „Inventar". Dort kannst du aus der gesamten Filmdatenbank Titel auswählen und zu deiner Vitrine hinzufügen. Maximal kannst du 12 Filme in deiner Vitrine ausstellen.'];
@@ -478,7 +478,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('Can I hire employees for my store?', '-', true), 'sort' => 18];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('Can I hire employees for my store?', '-', true), 'active' => true, 'sort' => 18];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich Mitarbeiter für meinen Shop einstellen?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'In deiner %shop_overview% findest du den Bereich „Mitarbeiter". Dort kannst du deine Mitarbeiter verwalten. Du kannst maximal 2 Mitarbeiter einstellen.'];
@@ -505,7 +505,7 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'store-inventory', 'slug' => url_title('Can I enter billings for my store?', '-', true), 'sort' => 19];
+        $data = ['category' => 'store-inventory', 'slug' => url_title('Can I enter billings for my store?', '-', true), 'active' => true, 'sort' => 19];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich Abrechnungen für meinen Shop eintragen?'];
         $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'In deiner %shop_overview% findest du den Bereich „Tagesabrechnungen". Dort kannst du deine Abrechnungen verwalten.'];
@@ -532,20 +532,20 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'movies-database', 'slug' => url_title('How do I add a new movie?', '-', true), 'sort' => 20];
+        $data = ['category' => 'movies-database', 'slug' => url_title('How do I add a new movie?', '-', true), 'active' => true, 'sort' => 20];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Wie kann ich einen neuen Film eintragen?'];
-        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Du kannst keine neuen Filme hinzufügen. Alle Filme die momentan im Spiel vorhanden sind wurden in der Datenbank eingepflegt. Du kannst aber bei der Datensammlung helfen und Daten zu deinem Lieblingsfilm, falls noch nicht vorhanden, ergänzen. Klicke dazu auf den "Film Details eintragen" Button in der Navigation.'];
-        $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'How do I add a new movie?'];
-        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'You cannot add new movies. All movies currently available in the game have been added to the database. However, you can help with the data collection by adding information about your favorite movie if it isn\'t already there. To do so, click the “Enter Movie Details” button in the navigation bar.'];
-        $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿Cómo agrego una nueva película?'];
-        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'No puedes agregar nuevas películas. Todas las películas disponibles actualmente en el juego se han agregado a la base de datos. Sin embargo, puedes ayudar con la recopilación de datos agregando información sobre tu película favorita si aún no está allí. Para hacerlo, haz clic en el botón "Ingresar detalles de la película" en la barra de navegación.'];
-        $translation_question_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'fr', 'translation' => 'Comment ajouter un nouveau film ?'];
-        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Vous ne pouvez pas ajouter de nouveaux films. Tous les films actuellement disponibles dans le jeu ont été ajoutés à la base de données. Cependant, vous pouvez aider à la collecte de données en ajoutant des informations sur votre film préféré s\'il n\'y est pas déjà. Pour ce faire, cliquez sur le bouton "Saisir les détails du film" dans la barre de navigation.'];
-        $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'Come aggiungo un nuovo film?'];
-        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Non puoi aggiungere nuovi film. Tutti i film attualmente disponibili nel gioco sono stati aggiunti al database. Tuttavia, puoi aiutare con la raccolta dei dati aggiungendo informazioni sul tuo film preferito se non è già presente. Per farlo, fai clic sul pulsante "Inserisci dettagli film" nella barra di navigazione.'];
-        $translation_question_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'pt', 'translation' => 'Como adiciono um novo filme?'];
-        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Você não pode adicionar novos filmes. Todos os filmes atualmente disponíveis no jogo foram adicionados ao banco de dados. No entanto, você pode ajudar na coleta de dados adicionando informações sobre seu filme favorito, se ainda não estiver lá. Para fazer isso, clique no botão "Inserir detalhes do filme" na barra de navegação.'];
+        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Du kannst keine neuen Filme hinzufügen. Alle Filme die momentan im Spiel vorhanden sind wurden in der Datenbank eingepflegt.'];
+        $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'How can I add a new movie?'];
+        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'You cannot add new movies. All movies currently available in the game have been added to the database.'];
+        $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿Cómo puedo añadir una nueva película?'];
+        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'No puedes añadir nuevas películas. Todas las películas disponibles actualmente en el juego han sido añadidas a la base de datos.'];
+        $translation_question_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'fr', 'translation' => 'Comment puis-je ajouter un nouveau film ?'];
+        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Vous ne pouvez pas ajouter de nouveaux films. Tous les films actuellement disponibles dans le jeu ont été ajoutés à la base de données.'];
+        $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'Come posso aggiungere un nuovo film?'];
+        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Non puoi aggiungere nuovi film. Tutti i film attualmente disponibili nel gioco sono stati aggiunti al database.'];
+        $translation_question_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'pt', 'translation' => 'Como posso adicionar um novo filme?'];
+        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Você não pode adicionar novos filmes. Todos os filmes atualmente disponíveis no jogo foram adicionados ao banco de dados.'];
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_en);
@@ -559,47 +559,20 @@ class Faq extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
 
-        $data = ['category' => 'movies-database', 'slug' => url_title('Can I rate movies?', '-', true), 'sort' => 21];
+        $data = ['category' => 'movies-database', 'slug' => url_title('Can I rate movies?', '-', true), 'active' => true, 'sort' => 21];
         $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Kann ich Filme bewerten?'];
-        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Du kannst keine Filme bewerten. Du kannst aber für jeden Film abstimmen. Alle Filme die momentan im Spiel vorhanden sind wurden in der Datenbank eingepflegt. Du kannst aber bei der Datensammlung helfen und Daten zu deinem Lieblingsfilm, falls noch nicht vorhanden, ergänzen. Klicke dazu auf den "Film Details eintragen" Button in der Navigation.'];
+        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Du kannst keine Filme bewerten. Du kannst aber für jeden Film abstimmen.'];
         $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'Can I rate movies?'];
-        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'You can\'t rate movies. However, you can vote for each movie. All movies currently available in the game have been added to the database. You can help with data collection by adding information about your favorite movie if it isn\'t already there. To do so, click the “Enter Movie Details” button in the navigation bar.'];
+        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'You cannot rate movies. But you can vote for each movie.'];
         $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿Puedo calificar películas?'];
-        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'No puedes calificar películas. Sin embargo, puedes votar por cada película. Todas las películas disponibles actualmente en el juego se han agregado a la base de datos. Puedes ayudar con la recopilación de datos agregando información sobre tu película favorita si aún no está allí. Para hacerlo, haz clic en el botón "Ingresar detalles de la película" en la barra de navegación.'];
+        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'No puedes calificar películas. Pero puedes votar por cada película.'];
         $translation_question_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'fr', 'translation' => 'Puis-je noter des films ?'];
-        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Vous ne pouvez pas noter les films. Cependant, vous pouvez voter pour chaque film. Tous les films actuellement disponibles dans le jeu ont été ajoutés à la base de données. Vous pouvez aider à la collecte de données en ajoutant des informations sur votre film préféré s\'il n\'y est pas déjà. Pour ce faire, cliquez sur le bouton "Saisir les détails du film" dans la barre de navigation.'];
+        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'Vous ne pouvez pas noter de films. Mais vous pouvez voter pour chaque film.'];
         $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'Posso valutare i film?'];
-        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Non puoi valutare i film. Tuttavia, puoi votare per ogni film. Tutti i film attualmente disponibili nel gioco sono stati aggiunti al database. Puoi aiutare con la raccolta dei dati aggiungendo informazioni sul tuo film preferito se non è già presente. Per farlo, fai clic sul pulsante "Inserisci dettagli film" nella barra di navigazione.'];
+        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Non puoi valutare i film. Ma puoi votare per ogni film.'];
         $translation_question_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'pt', 'translation' => 'Posso avaliar filmes?'];
-        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Você não pode avaliar filmes. No entanto, você pode votar em cada filme. Todos os filmes atualmente disponíveis no jogo foram adicionados ao banco de dados. Você pode ajudar na coleta de dados adicionando informações sobre seu filme favorito, se ainda não estiver lá. Para fazer isso, clique no botão "Inserir detalhes do filme" na barra de navegação.'];
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_de);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_de);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_en);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_en);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_es);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_es);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_fr);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_fr);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_it);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_it);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_pt);
-        $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_pt);
-
-        $data = ['category' => 'movies-database', 'slug' => url_title('Where does the movie data come from?', '-', true), 'sort' => 22];
-        $faq_id = $this->faqModel->protect(false)->skipValidation(true)->insert($data, true);
-        $translation_question_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'de', 'translation' => 'Woher stammen die Filmdaten?'];
-        $translation_answer_de = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'de', 'translation' => 'Die Filmdatenbank wird von unserer Community gepflegt. Jeder Nutzer kann neue Film Details ergänzen. Die Daten werden regelmäßig auf Echtheit überprüft.'];
-        $translation_question_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'en', 'translation' => 'Where does the movie data come from?'];
-        $translation_answer_en = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'en', 'translation' => 'You can\'t rate movies. However, you can vote for each movie. All movies currently available in the game have been added to the database. You can help with data collection by adding information about your favorite movie if it isn\'t already there. To do so, click the “Enter Movie Details” button in the navigation bar.'];
-        $translation_question_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'es', 'translation' => '¿De dónde provienen los datos de las películas?'];
-        $translation_answer_es = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'es', 'translation' => 'La Base de datos es mantenida por nuestra comunidad. Cada usuario puede agregar nuevos detalles de películas. Los datos se verifican regularmente para garantizar su autenticidad.'];
-        $translation_question_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'fr', 'translation' => 'D\'où viennent les données des films ?'];
-        $translation_answer_fr = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'fr', 'translation' => 'La Base de données est maintenue par notre communauté. Chaque utilisateur peut ajouter de nouveaux détails de films. Les données sont régulièrement vérifiées pour leur authenticité.'];
-        $translation_question_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'it', 'translation' => 'Da dove provengono i dati dei film?'];
-        $translation_answer_it = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'it', 'translation' => 'Il Database è mantenuto dalla nostra comunità. Ogni utente può aggiungere nuovi dettagli sui film. I dati vengono regolarmente verificati per verificarne l\'autenticità.'];
-        $translation_question_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'question', 'language' => 'pt', 'translation' => 'De onde vêm os dados dos filmes?'];
-        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'O Banco de dados é mantido por nossa comunidade. Cada usuário pode adicionar novos detalhes de filmes. Os dados são verificados regularmente quanto à autenticidade.'];
+        $translation_answer_pt = ['parent_id' => $faq_id, 'table_name' => 'faq', 'type' => 'answer', 'language' => 'pt', 'translation' => 'Você não pode avaliar filmes. Mas você pode votar em cada filme.'];
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_answer_de);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_question_en);

@@ -19,7 +19,7 @@ class FaqCategories extends Seeder
 
     public function run()
     {
-        $data = ['slug' => 'general', 'sort' => 1];
+        $data = ['slug' => 'general', 'active' => true, 'sort' => 1];
         $language_id = $this->faqCategoriesModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_data_de = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'de', 'translation' => 'Allgemein'];
         $translation_data_en = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'en', 'translation' => 'General'];
@@ -34,7 +34,7 @@ class FaqCategories extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
 
-        $data = ['slug' => 'account-profile', 'sort' => 2];
+        $data = ['slug' => 'account-profile', 'active' => true, 'sort' => 2];
         $language_id = $this->faqCategoriesModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_data_de = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'de', 'translation' => 'Konto & Profil'];
         $translation_data_en = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'en', 'translation' => 'Account & Profile'];
@@ -49,7 +49,7 @@ class FaqCategories extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
 
-        $data = ['slug' => 'membership-subscription', 'sort' => 3];
+        $data = ['slug' => 'membership-subscription', 'active' => false, 'sort' => 3];
         $language_id = $this->faqCategoriesModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_data_de = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'de', 'translation' => 'Mitgliedschaft & Abonnement'];
         $translation_data_en = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'en', 'translation' => 'Membership & Subscription'];
@@ -64,7 +64,7 @@ class FaqCategories extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
 
-        $data = ['slug' => 'store-inventory', 'sort' => 4];
+        $data = ['slug' => 'store-inventory', 'active' => true, 'sort' => 4];
         $language_id = $this->faqCategoriesModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_data_de = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'de', 'translation' => 'Shop & Inventar'];
         $translation_data_en = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'en', 'translation' => 'Store & Inventory'];
@@ -79,7 +79,7 @@ class FaqCategories extends Seeder
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_it);
         $this->translationsModel->protect(false)->skipValidation(true)->save($translation_data_pt);
 
-        $data = ['slug' => 'movies-database', 'sort' => 5];
+        $data = ['slug' => 'movies-database', 'active' => true, 'sort' => 5];
         $language_id = $this->faqCategoriesModel->protect(false)->skipValidation(true)->insert($data, true);
         $translation_data_de = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'de', 'translation' => 'Filme & Datenbank'];
         $translation_data_en = ['parent_id' => $language_id, 'table_name' => 'faq_categories', 'type' => 'name', 'language' => 'en', 'translation' => 'Movies & Database'];
