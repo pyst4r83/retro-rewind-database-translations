@@ -15,6 +15,11 @@
  */
 
 return [
+    'alerts' => [
+        'info' => [
+            'no_movies' => 'Aucun film trouvé dans l\'inventaire'
+        ]
+    ],
     'form' => [
         'btn' => [
             'add' => 'Ajouter un film'

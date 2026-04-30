@@ -37,6 +37,7 @@ return [
             'movie_not_found' => 'Film non trouvé',
             'no_id' => 'Aucun ID de film fourni'
         ],
+        'movies_not_found' => 'Aucun film trouvé',
         'network' => 'Erreur réseau. Veuillez réessayer plus tard.',
         'not_found' => 'Aucun film trouvé avec ce SKU.',
         'retry' => 'Une erreur est survenue. Veuillez réessayer.',
