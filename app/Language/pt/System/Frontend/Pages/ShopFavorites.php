@@ -7,7 +7,7 @@
  *
  * Folder:   System/Frontend/Pages
  * File:     ShopFavorites.php
- * Language: Português Brasileiro (pt_BR)
+ * Language: Português Brasileiro (pt)
  * Version:  1.0.0
  * Author:   Der Pueh
  *
@@ -15,6 +15,11 @@
  */
 
 return [
+    'alerts' => [
+        'info' => [
+            'no_movies' => 'Nenhum filme encontrado nos favoritos'
+        ]
+    ],
     'form' => [
         'btn' => [
             'add' => 'Adicionar filme'
